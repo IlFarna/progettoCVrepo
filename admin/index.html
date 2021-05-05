@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sito CV</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bootstrap Portfolio/Resume Theme for Developers">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+    <link rel="shortcut icon" href="../favicon.ico">  
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    
+    <!-- FontAwesome JS -->
+    <script defer src="../assets/fontawesome/js/all.js"></script>
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">   
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="../assets/css/styles.css">
+
+    <!-- Markdown JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js" integrity="sha512-L03kznCrNOfVxOUovR6ESfCz9Gfny7gihUX/huVbQB9zjODtYpxaVtIaAkpetoiyV2eqWbvxMH9fiSv5enX7bw==" crossorigin="anonymous"></script>
+
+
+    <!-- Contentful SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script defer type="text/javascript" src="../js/contentful.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@latest/runtime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/contentful-management@latest/dist/contentful-management.browser.min.js"></script>
+    <script src="adminjs.js"></script>
+
+    
+</head> 
+
+<body>
+    <!-- ******HEADER****** --> 
+    <header class="header">
+        <div class="container clearfix">                       
+            <img class="profile-image img-fluid float-left rounded-circle" src="../assets/images/Foto.jpg" alt="profile image" />
+            <div class="profile-content float-left">
+                <h1 class="name" id="name"></h1>
+                <h2 class="desc">Neolaureato</h2>   
+                <ul class="social list-inline">
+                    <li class="list-inline-item"><a id="link"><i class="fab fa-linkedin-in"></i></a></li>
+                    <!--<li class="list-inline-item"><a href="#"><i class="fab fa-github-alt"></i></a></li>    
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow"></i></a></li>   
+                    <li class="list-inline-item last-item"><a href="#"><i class="fab fa-codepen"></i></a></li> -->               
+                </ul> 
+            </div><!--//profile-->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn btn-cta-primary float-right"><i class="fas fa-user"></i> <script>cookieU()</script> </button>        
+        </div><!--//container-->
+    </header><!--//header-->
+    
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-lg-8 col-12">
+                <section class="about section">
+                    <div class="section-inner shadow-sm rounded">
+                        <a href="#" class="admin"> <i class="fas fa-times float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-edit float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-plus float-right ml-1"></i></a>
+                        <h2 class="heading">Titolo di studio</h2>
+                        <div class="content" id="titles">
+                        </div><!--//content-->
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+    
+               <section class="latest section">
+                    <div class="section-inner shadow-sm rounded">
+                        <a href="#" class="admin"> <i class="fas fa-times float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-edit float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-plus float-right ml-1"></i></a>
+                        <h2 class="heading">Esperienze lavorative</h2>
+                        <div class="content" id="works">                                
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                
+                </section><!--//section-->
+                
+                <section class="projects section">
+                    <div class="section-inner shadow-sm rounded">
+                        <a href="#" class="admin"> <i class="fas fa-times float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-edit float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-plus float-right ml-1"></i></a>
+                        <h2 class="heading">Istruzione e formazione</h2>
+                        <div class="content" id="studies">
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+                
+                <!-- <section class="experience section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Competenze personali</h2>
+                        <div class="content">
+                            <!-- <div class="item">
+                                <h3 class="title">Co-Founder & Lead Developer - <span class="place"><a href="#">Startup Hub</a></span> <span class="year">(2014 - Present)</span></h3>
+                                <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.</p>
+                            </div><!--//item-->
+                            <!--<div class="item">
+                                <h3 class="title">Software Engineer - <span class="place"><a href="#">Google</a></span> <span class="year">(2013 - 2014)</span></h3>
+                                <p>Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+                            </div><!--//item-->
+                            
+                            <!--<div class="item">
+                                <h3 class="title">Software Engineer - <span class="place"><a href="#">eBay</a></span> <span class="year">(2012 - 2013)</span></h3>
+                                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                            </div><!--//item-->
+                            
+                        <!-- </div> <!--//content -->  
+                    <!-- </div><!--//section-inner-->                 
+                <!-- </section><!--//section-->
+                <section class="github section">
+                    <div class="section-inner shadow-sm rounded">
+                        <a href="#" class="admin"> <i class="fas fa-times float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-edit float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-plus float-right ml-1"></i></a>
+                        <h2 class="heading">Lingue</h2>
+                        <div class="content" id="languages">
+                        </div>
+                    </div><!--//secton-inner-->
+
+                </section><!--//section-->
+                <section class="github section">
+                    <div class="section-inner shadow-sm rounded">
+                        <a href="#" class="admin"> <i class="fas fa-times float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-edit float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-plus float-right ml-1"></i></a>
+                        <h2 class="heading">Competenze personali</h2>
+                    <div class="content" id="personal_skills">
+                    </div>
+                    </div><!--//secton-inner-->
+                </section><!--//section-->
+            </div><!--//primary-->
+            <div class="secondary col-lg-4 col-12">
+                 <aside class="info aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <a href="#" class="admin"> <i class="fas fa-times float-right"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-edit float-right"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-plus float-right"></i></a>
+                        <h2 class="heading">Informazioni di base</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span><span id="address"></span></li>
+                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span></span><span id="email"></span></li>
+                                <li><i class="fas fa-phone"></i><span class="sr-only">Phone:</span><span id="phone"></span></li>
+                            </ul>
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//aside-->
+                
+                <aside class="skills aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <a href="#" class="admin"> <i class="fas fa-times float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-edit float-right ml-1"></i></a>
+                        <a href="#" class="admin"> <i class="fas fa-plus float-right ml-1"></i></a>
+                        <h2 class="heading">Competenze digitali</h2>
+                        <div class="content">
+                            <p class="intro">
+                                Autovalutazione </p>
+                            
+                            <div class="skillset">
+                               
+                                <div class="item">
+                                    <h3 class="level-title">Elaborazione informazioni <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner elabinfo" >
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">Comunicazione<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner elabinfo">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">Creazione di contenuti<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner elabinfo">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <div class="item">
+                                    <h3 class="level-title">Sicurezza<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Pro</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner elabinfo">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+
+                                <div class="item">
+                                    <h3 class="level-title">Risoluzione dei problemi<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Pro</span></h3>
+                                    <div class="level-bar">
+                                        <div class="level-bar-inner elabinfo">
+                                        </div>                                      
+                                    </div><!--//level-bar-->                                 
+                                </div><!--//item-->
+                                
+                                <p><a class="more-link" href="#"><i class="fas fa-external-link-alt"></i>More on GitHub</a></p> 
+                            </div>              
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//section-->
+                
+                <aside class="testimonials aside section">
+                    <div class="section-inner shadow-sm rounded">
+                        <h2 class="heading">Patente</h2>
+                        <div class="content" id="drivelicence">                            
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
+                </aside><!--//section-->
+              
+            </div><!--//secondary-->    
+        </div><!--//row-->
+    </div><!--//masonry-->
+    
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+                <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+                <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+ 
+    <!-- Javascript -->          
+    <script type="text/javascript" src="../assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../assets/plugins/popper.min.js"></script> 
+    <script type="text/javascript" src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
+    <!-- <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> -->
+    <!-- custom js -->
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html> 
+
