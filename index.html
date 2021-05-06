@@ -24,7 +24,6 @@
 
     <!-- Markdown JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js" integrity="sha512-L03kznCrNOfVxOUovR6ESfCz9Gfny7gihUX/huVbQB9zjODtYpxaVtIaAkpetoiyV2eqWbvxMH9fiSv5enX7bw==" crossorigin="anonymous"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- Contentful SDK -->
     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
     <script defer type="text/javascript" src="js/contentful.js"></script>
@@ -80,28 +79,6 @@
                         </div><!--//content-->  
                     </div><!--//section-inner-->                 
                 </section><!--//section-->
-                
-                <!-- <section class="experience section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Competenze personali</h2>
-                        <div class="content">
-                            <!-- <div class="item">
-                                <h3 class="title">Co-Founder & Lead Developer - <span class="place"><a href="#">Startup Hub</a></span> <span class="year">(2014 - Present)</span></h3>
-                                <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.</p>
-                            </div><!--//item-->
-                            <!--<div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a href="#">Google</a></span> <span class="year">(2013 - 2014)</span></h3>
-                                <p>Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
-                            </div><!--//item-->
-                            
-                            <!--<div class="item">
-                                <h3 class="title">Software Engineer - <span class="place"><a href="#">eBay</a></span> <span class="year">(2012 - 2013)</span></h3>
-                                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
-                            </div><!--//item-->
-                            
-                        <!-- </div> <!--//content -->  
-                    <!-- </div><!--//section-inner-->                 
-                <!-- </section><!--//section-->
                 <section class="github section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Lingue</h2>
@@ -256,8 +233,7 @@
                         </button>
                 </div>
             <div class="modal-body">
-                <form onsubmit="NewEntry()">
-                    <div class="input-group form-group">
+                <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
@@ -283,10 +259,9 @@
                     </div>
                     <div class="form-group">
                         <!-- <input type="submit" value="Login" class="btn float-right login_btn"> -->
-                        <input type="submit" value="Invia" class="btn float-right btn-success" data-toggle="modal" data-target="#finish">
+                        <input type="submit" value="Invia" class="btn float-right btn-success" data-toggle="modal" data-target="#finish" onclick="NewEntry()">
                     </div>
-                </form>
-            </div>
+                </div>
             </div>
         </div>
     </div>
