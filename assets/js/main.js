@@ -43,18 +43,11 @@ function FormresetL(){
     $(this).find('form').trigger('reset');
     });
 };
-
-function sendEmail(){
-    Email.send({
-        Host: 
-        Username: 
-        Password: 
-        To: 
-        From:
-        Subject: 
-        Body: 
-    })
-}
+function FormresetO(){
+    $('#contactme').on('hidden.bs.modal', function(e) {
+    $(this).find('form').trigger('reset');
+    });
+};
 $('a#link').click(function (){
     window.open('https://www.linkedin.com/in/vincenzo-farnatale-a9597b1b3/', "_blank");
 });
