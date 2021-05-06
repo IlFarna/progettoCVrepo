@@ -4,12 +4,6 @@ var client = contentful.createClient({
 });
 
 client.getEntry('6GMUC5JTHOwbFf2WFk5YnL').then((entry) => {
-  // logs the entry metadata
-  console.log(entry.sys);
-
-  // logs the field with ID title
-  console.log(entry.fields);
-
   const data = entry.fields;
   const converter = new showdown.Converter({tables: true});
   $("#name").text(data.nome + ' ' + data.cognome);
@@ -49,7 +43,7 @@ function NewEntry () {
 					'it-IT': $('#N').val()
 				},
 			}
-		}).then(() => FormresetO())));
+		}).then(() => document.location.reload())));
 		$('#contactme').modal('toggle');
 	}
 	else{
