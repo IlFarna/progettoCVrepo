@@ -31,24 +31,31 @@ var formClient = contentfulManagement.createClient({
 	accessToken: 'CFPAT-Ij9QRNQ27BuEQaiIFmEzaeXK95YwLQAAzq_Qxjq2G6k'
 });
 function NewEntry () {
-
-formClient.getSpace('1bwizuri0144')
-.then(space => space.getEnvironment('master')
-	.then(env => env.createEntry('offerteDiLavoro', {
-		fields: {
-			referente: {
-				'it-IT': $('#R').val(), 
-			},
-			ragioneSociale: {
-				'it-IT': $('#RS').val(),
-			},
-			email: {
-				'it-IT': $('#E').val()
-			},
-			note: {
-				'it-IT': $('#N').val()
-			},
-		}
-	}).then(() => FormresetO())));
-$('#contactme').modal('toggle');
+	if($('#R').val() != "" && $('#RS').val() != "" && $('#E').val() != "" && $('#N').val() != ""){
+		formClient.getSpace('1bwizuri0144')
+		.then(space => space.getEnvironment('master')
+		.then(env => env.createEntry('offerteDiLavoro', {
+			fields: {
+				referente: {
+					'it-IT': $('#R').val(), 
+				},
+				ragioneSociale: {
+					'it-IT': $('#RS').val(),
+				},
+				email: {
+					'it-IT': $('#E').val()
+				},
+				note: {
+					'it-IT': $('#N').val()
+				},
+			}
+		}).then(() => FormresetO())));
+		$('#contactme').modal('toggle');
+	}
+	else{
+		alert("I campi sono obbligatori");
+		FormresetO();
+		$('#contactme').modal('toggle');
+		$('#finish').modal('toggle');
+	}
 };

@@ -45,7 +45,7 @@ function FormresetL(){
 };
 function FormresetO(){
     $('#contactme').on('hidden.bs.modal', function(e) {
-    $(this).find('form').trigger('reset');
+    $(this).find("input[type=text]").val("");
     });
 };
 $('a#link').click(function (){
